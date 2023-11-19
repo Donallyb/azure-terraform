@@ -10,15 +10,15 @@ I've taken the liberty of modifying some of the supplied scripts to further tail
 
 The goal of this optional task was to implement Azure Active Directory (AAD) login functionality on an Azure Linux VM. Building upon this Azure Terraform project, the following steps were necessary to facilitate logging into the Linux VM created via Terraform:
 
-1. Enable a System-Assigned Managed Identity on the Azure Linux VM
+## 1. Enable a System-Assigned Managed Identity on the Azure Linux VM
 
 This step involves activating a system-assigned identity for the Azure Linux VM, which grants the VM an Azure AD identity for accessing other Azure services.
 
-2. Install the AADSSHLogin Extension
+## 2. Install the AADSSHLogin Extension
 
 The installation of the AADSSHLogin extension is done through the 'Extensions and Applications' feature within Azure. This extension is crucial for enabling AAD authentication on the VM.
 
-3. Assign Roles in Access Control (IAM)
+## 3. Assign Roles in Access Control (IAM)
 
 Assign the "Virtual Machine Administrator Login" role to your Azure AD account to grant sudo privileges on the Azure Linux VM. Alternatively, if sudo rights are not required, the "Virtual Machine User Login" role can be assigned.
 
